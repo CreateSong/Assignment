@@ -1,0 +1,56 @@
+div {
+  margin: 30px;
+}
+
+.box1{
+  background-color: rgb(249, 77, 77);
+  width: 150px;
+  border: 3px solid rgb(189, 22, 22);
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 2px 2px 0px 1px salmon inset;
+  box-sizing: border-box;
+}
+
+.box2{
+  width: 150px;
+  padding: 20px 0;
+  border: 5px dashed rgba(28, 234, 17, 0.53);
+  text-align: center;
+  border-radius: 40px;
+  background: linear-gradient(90deg, rgba(0,180,15,1) 44%, rgba(249,255,0,1) 100%);
+  background-clip: padding-box;
+}
+
+.box3{
+  background-color: beige;
+  width: 150px;
+  padding: 20px 0;
+  border: 2px solid sandybrown;
+  text-align: center;
+  border-radius: 0 40px 40px 40px;
+  background-clip: padding-box;
+  box-shadow: 5px 5px 5px 1px sandybrown;
+}
+
+p {
+  margin: auto;
+}
+
+.pizza {
+  color: orange;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sandwich {
+  color: yellow;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chicken {
+  color: brown;
+  font-size: 20px;
+  font-weight: bold;
+}
