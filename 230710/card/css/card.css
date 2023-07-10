@@ -1,0 +1,97 @@
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  /* 브라우저에 margin 기본값이 설정되어있기 때문에 0으로 초기값 설정  */
+}
+
+h1,
+h2 {
+  font: inherit; 
+  /* 조상에서 상속받겠다는 뜻. 바로 위 부모에 font 속성이 적용되어있으면 그 속성을 따르고, 위로 계속해서 없는 경우 결국 html(root)에 font 속성들을 상속받게 됨. html (폰트사이즈 16px, 컬러 black */
+}
+
+a {
+  color: inherit; /* 위 h1,h2 설명과 동일 */
+  text-decoration: none; /* text-decoration은 선으로 텍스트를 꾸미는 속성이며, none은 선을 만들지 않는다는 뜻 */
+}
+
+article {
+  margin: 10px;
+  ;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* @font-face속성은 브라우저 사용자의 컴퓨터에 특정 폰트가 설치되어 있지 않아도 해당 속성을 통해 폰트를 설치하여 사용할 수 있도록 함 */
+
+body {
+  font-family: 'Pretendard-Regular', sans-serif; /* 글꼴 설정하는 속성, sans-serif는 앞에 작성한 font를 불러오지 못할 때 기본글씨 출력 */
+  color: #29363d;
+}
+
+.card-ui {
+  width: 288px;
+  border-radius: 8px; /* 상자의 모서리를 둥글게 처리함. 작성 순서대로 시계방향(top,right,bottom,left) 적용 */
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가. 작성 순서대로 offset-x, offset-y, blur-radius, spread-radius, color */
+  display: inline-block; /* block요소를 inline요소로 바꿔줌*/
+  /* display: inline; */
+  /* float: left; */
+  /* display: flex; */
+}
+
+.card-ui img {
+  width: 100%; /* .card ui width값 288px의 100% */
+  aspect-ratio: 288/196; /* 기본 가로세로 비율 설정 */
+  object-fit: cover; /* 이미지 본래 비율은 지키되, 이미지 일부가 짤릴 수 있음. 특히 썸네일, 미리보기, 이미지를 포함하고 있는 카드, 여러 이미지로 이루어진 그리드를 만들 때 많이 사용함. 이러한 UI는 보통 클릭하거나 호버(hover)하면 전체 이미지를 볼 수 있으므로 이미지가 조금 잘려도 큰 문제가 되지 않는 경우가 많음 */
+  border-radius: 8px 8px 0 0;
+}
+
+.card-ui .text-group {
+  padding: 24px 16px 16px; /* padding: 테두리와 내용물 사이의 틈. 작성 순서대로 시계방향(top, right, bottom, left) 적용 */
+}
+
+.card-ui h2 {
+  font-family: 'Pretendard-Bold';
+  overflow: hidden; /* overflow: 박스보다 콘텐츠가 더 커 콘텐츠가 넘칠 경우 어떻게 처리할 것인가? , hidden: 요소의 크기만큼 맞추기 위해 잘라내며, 스크롤바를 제공하지 않음 */
+  white-space: nowrap; /* white-space: 공백 처리 방법 정하는 속성, nowrap: 텍스트가 부모 요소 안의 가로폭을 넘어가더라도 자동 줄바꿈이 일어나지 않게 함. */
+  text-overflow: ellipsis; /* 사용자가 혼란스럽지 않도록 text-overflow 속성을 사용하여 말줄임 기호(...)를 보여줌 */
+}
+
+.card-ui .content {
+  font-size: 14px;
+  color: #5a6a72;
+  margin: 16px 0; /* top:16, right:0, bottom:16, left:0 */
+  overflow: hidden;
+
+  display: -webkit-box; /* display: 박스유형 , -webkit-box: 웹킷 기반 브라우저 (예: Safari)에서 사용되는 렌더링 박스 유형을 지정하는 CSS 속성 */ 
+  -webkit-box-orient: vertical; /* -webkit-box-orient: 유연한 박스가 블록 수준 요소로 표시될 때의 방향을 지정, vertical: 박스가 수직으로 쌓임 */
+  -webkit-line-clamp: 2; /* 요소가 표시될 수 있는 최대 줄 수를 설정. 입력한 2는 텍스트 두 줄 이후로 자르게 된다는 뜻 */
+  line-height: 1.6; /* 텍스트의 줄 높이 설정. 줄의 높이는 글꼴 크기의 1.6배가 된다는 뜻 */
+  height: calc(14px * 1.6 * 2); /* 글꼴크기 14px * 줄 높이 1.6 * 줄 수 2를 곱하여 높이 계산 */
+
+  /* 요약: 최대 두 줄로 텍스트를 표시하는 상자를 생성하며, 글꼴 크기, 줄 높이 및 줄 수에 기반하여 상자의 높이를 설정함. */
+
+  /* white-space: nowrap;
+  text-overflow: ellipsis; */
+}
+
+.card-ui .read {
+  text-decoration: underline; /* 텍스트 꾸미기: 밑줄 */
+  font-family: 'Pretendard-Bold';
+  font-size: 14px;
+  padding: 0 0 0 6px;
+}
