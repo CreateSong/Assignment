@@ -1,0 +1,38 @@
+section,
+div,
+p {
+  margin: 0;
+}
+
+div {
+  width: 350px;
+  height: 140px;
+  border-radius: 5px;
+  border: 1px solid #DBDBDB;
+}
+
+.hi {
+  width: 215px;
+  height: 15px;
+}
+
+.head {
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.login-box {
+  width: 318px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #711bff;
+  text-decoration: none;
+  color: white;
+}
+
+.id-pw a {
+  text-decoration: none;
+  color: #767676;
+}
+
