@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button 꾸미기</title>
+    <style>
+      :root {
+        --text-deco: underline;
+        --color: white;
+      }
+
+      button {
+        margin: 10px;
+        background-color: #2D3848;
+        width: 150px;
+        border: 3px solid #1A202C;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 2px 2px 0px 1px #4A5568 inset;
+        box-sizing: border-box;
+        color: #CBD5DF
+      }
+
+      .button1:hover {
+        text-decoration: var(--text-deco);
+        color: var(--color, white);
+      }
+
+      .button1:active {
+        box-shadow: 2px 2px 0px 1px #262F3E inset;
+        text-decoration: var(--text-deco);
+        color: var(--color, white);
+      }
+
+      .button1:disabled {
+        box-shadow: none;
+        border: 3px solid #1A202C;
+        text-decoration: none;
+        color: #4A5568;
+      }
+    </style>
+</head>
+<body>
+    <button type="button" class="button1">Button</button>
+    <button type="button" disabled class="button1">Button</button>
+</body>
+</html>
