@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 레이아웃</title>
+    <style>
+      .grid {
+        display: grid;
+      }
+
+      .header {
+        background-color: royalblue;
+      }
+
+      .content {
+        background-color: salmon;
+      }
+
+      .footer {
+        background-color: blueviolet;
+      }
+    </style>
+</head>
+<body>
+  <div class="grid">
+    <p class="header">header</p>
+      <div class="content">
+        <p>section > article</p>
+        <p>aside</p>
+      </div>
+    <p class="footer">footer</p>
+  </div>
+</body>
+</html>
